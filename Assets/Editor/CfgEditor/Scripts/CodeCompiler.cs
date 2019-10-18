@@ -72,12 +72,12 @@ public static class CodeCompiler
             FieldInfo dictInfo = container.GetType().GetField("Dict");
             object dict = dictInfo.GetValue(container);
 
-            bool isExist = (bool)dict.GetType().GetMethod("ContainsKey").Invoke(dict, new object[] { id });
-            if (isExist)
-            {
-                Debug.LogError("repetitive key " + id + " in " + container.GetType().Name);
-                break;
-            }
+            //bool isExist = (bool)dict.GetType().GetMethod("ContainsKey").Invoke(dict, new object[] { id });
+            //if (isExist)
+            //{
+            //    Debug.LogError("repetitive key " + id + " in " + container.GetType().Name);
+            //    break;
+            //}
             dict.GetType().GetMethod("Add").Invoke(dict, new object[] { id, t });
         }
 
