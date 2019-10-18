@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GameMain : MonoBehaviour
 {
+    private int[] intArr;
+
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);

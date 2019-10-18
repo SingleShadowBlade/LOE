@@ -7,13 +7,13 @@ namespace Tangzx.ABSystem
 {
     public class AssetBundleBuildPanel : EditorWindow
     {
-        [MenuItem("ABSystem/Builder Panel")]
+        [MenuItem("ABTool/BuildPanel")]
         static void Open()
         {
             GetWindow<AssetBundleBuildPanel>("ABSystem", true);
         }
 
-        [MenuItem("ABSystem/Builde AssetBundles")]
+        [MenuItem("ABTool/BuildAssetBundles")]
         static void BuildAssetBundles()
         {
             AssetBundleBuildConfig config = LoadAssetAtPath<AssetBundleBuildConfig>(savePath);
