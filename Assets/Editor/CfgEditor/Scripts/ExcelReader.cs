@@ -34,8 +34,10 @@ public static class ExcelReader
 
             for (int rowStart = excelWorksheet.Dimension.Start.Row, rowEnd = excelWorksheet.Dimension.End.Row; rowStart <= rowEnd; rowStart++)
             {
+                List<ConfigData> configDataList = new List<ConfigData>();
                 for (int colStart = excelWorksheet.Dimension.Start.Column, colEnd = excelWorksheet.Dimension.End.Column; colStart <= colEnd; colStart++)
                 {
+
                     string str = "null";
                     if (excelWorksheet.GetValue<string>(rowStart, colStart) != null)
                         str = excelWorksheet.GetValue<string>(rowStart, colStart);
@@ -49,18 +51,18 @@ public static class ExcelReader
                             fieldNameArr[index] = str;
                         else
                         {
-                            List<ConfigData> configDataList = new List<ConfigData>();
                             ConfigData data = GetData();
                             data.fieldType = fieldTypeArr[index];
                             data.fieldName = fieldNameArr[index];
                             data.fieldData = str;
                             configDataList.Add(data);
-                            dataList.Add(configDataList.ToArray());
                         }
                     }
                 }
+                if (rowStart > (int)ColType.FieldName)
+                    dataList.Add(configDataList.ToArray());
             }
-
+            
             string className = newFile.Name;
             int pos = className.IndexOf('.');
             className = className.Substring(0, pos);
@@ -71,8 +73,8 @@ public static class ExcelReader
                 Debug.LogError("相同的表名 " + className);
             else
                 dataDict.Add(className, dataList);
-            CodeCompiler.CompileCode(codeList, dataDict);
         }
+        CodeCompiler.CompileCode(codeList, dataDict);
     }
 
     private static ConfigData GetData()

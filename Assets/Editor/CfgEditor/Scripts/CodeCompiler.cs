@@ -16,17 +16,16 @@ public static class CodeCompiler
     public static void CompileCode(List<string> codeList, Dictionary<string, List<ConfigData[]>> dataDict)
     {
         Assembly assembly = CompileCode(codeList.ToArray());
-        string path = Constant.dllPath;
-        //if (Directory.Exists(path))
-        //    Directory.Delete(path, true);
-        //    Directory.CreateDirectory(path);
+        string path = Constant.bytesPath;
+        if (!Directory.Exists(path))
+            Directory.CreateDirectory(path);
         foreach (KeyValuePair<string, List<ConfigData[]>> each in dataDict)
         {
             object container = assembly.CreateInstance(each.Key + "Container");
             Type temp = assembly.GetType(each.Key);
             Serialize(container, temp, each.Value, path);
         }
-        CreateDataManager(assembly);
+        CreateConfigManager(assembly);
     }
 
     //编译代码
@@ -39,7 +38,7 @@ public static class CodeCompiler
         CSharpCodeProvider codeProvider = new CSharpCodeProvider();
         CompilerParameters objCompilerParameters = new CompilerParameters();
         objCompilerParameters.ReferencedAssemblies.AddRange(new string[] { "System.dll" });
-        objCompilerParameters.OutputAssembly = path + "Config.dll";
+        objCompilerParameters.OutputAssembly = path + "CfgScript.dll";
         objCompilerParameters.GenerateExecutable = false;
         objCompilerParameters.GenerateInMemory = true;
 
@@ -52,6 +51,7 @@ public static class CodeCompiler
                 Console.WriteLine(err.ErrorText);
             return null;
         }
+        Debug.Log(">>>>>>>>>>>>>>>>>:生成Dll成功");
         return cr.CompiledAssembly;
     }
 
@@ -72,12 +72,12 @@ public static class CodeCompiler
             FieldInfo dictInfo = container.GetType().GetField("Dict");
             object dict = dictInfo.GetValue(container);
 
-            //bool isExist = (bool)dict.GetType().GetMethod("ContainsKey").Invoke(dict, new object[] { id });
-            //if (isExist)
-            //{
-            //    Debug.LogError("repetitive key " + id + " in " + container.GetType().Name);
-            //    break;
-            //}
+            bool isExist = (bool)dict.GetType().GetMethod("ContainsKey").Invoke(dict, new object[] { id });
+            if (isExist)
+            {
+                Debug.LogError("repetitive key " + id + " in " + container.GetType().Name);
+                return;
+            }
             dict.GetType().GetMethod("Add").Invoke(dict, new object[] { id, t });
         }
 
@@ -86,6 +86,7 @@ public static class CodeCompiler
                   FileAccess.Write, FileShare.Write);
         f.Serialize(s, container);
         s.Close();
+        Debug.Log(">>>>>>>>>>>>>>>>>:生成" + temp.Name +"bytes数据成功！");
     }
 
     private static object ParseValue(string fieldType, string fieldData)
@@ -99,7 +100,7 @@ public static class CodeCompiler
     }
 
     //创建数据管理器脚本
-    private static void CreateDataManager(Assembly assembly)
+    private static void CreateConfigManager(Assembly assembly)
     {
         IEnumerable types = assembly.GetTypes().Where(t => { return t.Name.Contains("Container"); });
 
@@ -114,13 +115,13 @@ public static class CodeCompiler
         source.Append("using System.Runtime.Serialization.Formatters.Binary;\n");
         source.Append("using System.IO;\n\n");
         source.Append("[Serializable]\n");
-        source.Append("public class DataManager : SingletonTemplate<DataManager>\n");
+        source.Append("public class ConfigManager : Singleton<ConfigManager>\n");
         source.Append("{\n");
 
         //定义变量
         foreach (Type t in types)
         {
-            source.Append("\tpublic " + t.Name + " " + t.Name.Remove(0, 2) + ";\n");
+            source.Append("\tprivate " + t.Name + " m" + t.Name + ";\n");
         }
         source.Append("\n");
 
@@ -128,13 +129,13 @@ public static class CodeCompiler
         foreach (Type t in types)
         {
             string typeName = t.Name.Remove(t.Name.IndexOf("Container"));
-            string funcName = t.Name.Remove(0, 2);
+            string funcName = t.Name;
             funcName = funcName.Substring(0, 1).ToUpper() + funcName.Substring(1);
             funcName = funcName.Remove(funcName.IndexOf("Container"));
             source.Append("\tpublic " + typeName + " Get" + funcName + "(int id)\n");
             source.Append("\t{\n");
             source.Append("\t\t" + typeName + " t = null;\n");
-            source.Append("\t\t" + t.Name.Remove(0, 2) + ".Dict.TryGetValue(id, out t);\n");
+            source.Append("\t\tm" + t.Name + ".Dict.TryGetValue(id, out t);\n");
             source.Append("\t\tif (t == null) Debug.LogError(" + '"' + "can't find the id " + '"' + " + id " + "+ " + '"' + " in " + t.Name + '"' + ");\n");
             source.Append("\t\treturn t;\n");
             source.Append("\t}\n");
@@ -146,7 +147,7 @@ public static class CodeCompiler
         foreach (Type t in types)
         {
             string typeName = t.Name.Remove(t.Name.IndexOf("Container"));
-            source.Append("\t\t" + t.Name.Remove(0, 2) + " = Load(" + '"' + typeName + '"' + ") as " + t.Name + ";\n");
+            source.Append("\t\tm" + t.Name + " = Load(" + '"' + typeName + '"' + ") as " + t.Name + ";\n");
         }
         source.Append("\t}\n\n");
 
@@ -165,8 +166,9 @@ public static class CodeCompiler
         //保存脚本
         string path = Constant.csScriptPath;
         if (!Directory.Exists(path)) Directory.CreateDirectory(path);
-        StreamWriter sw = new StreamWriter(path + "DataManager.cs");
+        StreamWriter sw = new StreamWriter(path + "ConfigManager.cs");
         sw.WriteLine(source.ToString());
         sw.Close();
+        Debug.Log(">>>>>>>>>>>>>>>>>:生成ConfigManager成功！\n 配置生成完毕！");
     }
 }
