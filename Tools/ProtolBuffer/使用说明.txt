@@ -1,1 +1,1 @@
-点击GenDll.bat 生成ProtoCoreData.dll和Serialzer_ProtoCoreData.dll，拷贝到工程里使用（bat待修改）
+点击GenDll.bat 生成PBData.dll和SerialzerPBData.dll，拷贝到工程里使用（bat待修改）
