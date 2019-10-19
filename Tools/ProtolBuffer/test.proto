@@ -1,0 +1,12 @@
+
+message PlayerInfo
+{
+	optional string name = 1;
+	optional string sex = 2;
+}
+ 
+message LoginInfo
+{
+	optional PlayerInfo playerInfo = 1;
+	required uint32 userId = 2;
+}
