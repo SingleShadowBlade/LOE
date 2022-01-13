@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-01-13T08:05:22.010Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36" etag="qRhniZa8l3Eb3V3wp9PB" version="16.2.4" type="github">
+<mxfile host="app.diagrams.net" modified="2022-01-13T08:14:02.814Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36" etag="30a-vTfZyce4ToV9Kgtd" version="16.2.4" type="github">
   <diagram id="O_gt03hDVKV7DUXif5dQ" name="Page-1">
     <mxGraphModel dx="1178" dy="641" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -88,6 +88,9 @@
         <mxCell id="dRS1vSFEmsA6nEb2G2MO-35" value="Streaming结束" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=3;" vertex="1" parent="1">
           <mxGeometry x="250" y="420" width="60" height="30" as="geometry" />
         </mxCell>
+        <mxCell id="dRS1vSFEmsA6nEb2G2MO-47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=3;" edge="1" parent="1" source="dRS1vSFEmsA6nEb2G2MO-36" target="dRS1vSFEmsA6nEb2G2MO-46">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="dRS1vSFEmsA6nEb2G2MO-36" value="根据Bounds计算RT大小和相机位置并执行Capture" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=3;" vertex="1" parent="1">
           <mxGeometry x="110" y="475" width="280" height="30" as="geometry" />
         </mxCell>
@@ -108,6 +111,15 @@
         </mxCell>
         <mxCell id="dRS1vSFEmsA6nEb2G2MO-43" value="选择拼完的作为Capture对象" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=3;" vertex="1" parent="1">
           <mxGeometry x="190" y="155" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dRS1vSFEmsA6nEb2G2MO-46" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=3;" vertex="1" parent="1">
+          <mxGeometry x="190" y="670" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dRS1vSFEmsA6nEb2G2MO-48" value="保存图片" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=3;" vertex="1" parent="1">
+          <mxGeometry x="30" y="554" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dRS1vSFEmsA6nEb2G2MO-49" value="异步线程保存图片" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=3;" vertex="1" parent="1">
+          <mxGeometry x="190" y="685" width="120" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
