@@ -1,11 +1,11 @@
-<mxfile host="app.diagrams.net" modified="2022-01-13T08:22:17.861Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36" etag="Ok-Hu2kgrXUXiKJEyXvC" version="16.2.4" type="github">
+<mxfile host="app.diagrams.net" modified="2022-01-13T08:28:00.929Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36" etag="KK8vxhcuHHvB8Db62m8e" version="16.2.4" type="github">
   <diagram id="O_gt03hDVKV7DUXif5dQ" name="Page-1">
     <mxGraphModel dx="1178" dy="641" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="dRS1vSFEmsA6nEb2G2MO-1" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-          <mxGeometry x="35" y="50" width="430" height="700" as="geometry" />
+          <mxGeometry x="35" y="50" width="430" height="1130" as="geometry" />
         </mxCell>
         <mxCell id="dRS1vSFEmsA6nEb2G2MO-2" value="实时渲染" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="220" y="60" width="60" height="30" as="geometry" />
@@ -141,6 +141,30 @@
         </mxCell>
         <mxCell id="dRS1vSFEmsA6nEb2G2MO-58" value="AutoCapture" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=3;" vertex="1" parent="1">
           <mxGeometry x="354" y="670" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dRS1vSFEmsA6nEb2G2MO-59" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=3;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="50" y="740" width="410" height="420" as="geometry" />
+        </mxCell>
+        <mxCell id="dRS1vSFEmsA6nEb2G2MO-60" value="一些细节" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=3;" vertex="1" parent="1">
+          <mxGeometry x="220" y="740" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dRS1vSFEmsA6nEb2G2MO-61" value="" style="rounded=1;whiteSpace=wrap;html=1;fontSize=3;" vertex="1" parent="1">
+          <mxGeometry x="70" y="780" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dRS1vSFEmsA6nEb2G2MO-62" value="逻辑" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=3;" vertex="1" parent="1">
+          <mxGeometry x="100" y="750" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dRS1vSFEmsA6nEb2G2MO-63" value="" style="rounded=1;whiteSpace=wrap;html=1;fontSize=3;" vertex="1" parent="1">
+          <mxGeometry x="240" y="780" width="204" height="370" as="geometry" />
+        </mxCell>
+        <mxCell id="dRS1vSFEmsA6nEb2G2MO-64" value="渲染" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=3;" vertex="1" parent="1">
+          <mxGeometry x="312" y="750" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dRS1vSFEmsA6nEb2G2MO-65" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=3;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="540" y="740" width="270" height="310" as="geometry" />
+        </mxCell>
+        <mxCell id="dRS1vSFEmsA6nEb2G2MO-66" value="改枪" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=3;" vertex="1" parent="1">
+          <mxGeometry x="645" y="750" width="60" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
