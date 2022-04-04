@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-04-04T04:34:58.699Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.60 Safari/537.36" etag="7MgrBrZxpt-cQmT31bJ4" version="17.2.4" type="github">
+<mxfile host="app.diagrams.net" modified="2022-04-04T05:43:08.416Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.60 Safari/537.36" etag="_jNqrMiYDbme0nArLZNW" version="17.2.4" type="github">
   <diagram id="6a731a19-8d31-9384-78a2-239565b7b9f0" name="Page-1">
-    <mxGraphModel dx="1038" dy="616" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
+    <mxGraphModel dx="1221" dy="725" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -75,6 +75,39 @@
         </mxCell>
         <mxCell id="Uo8tirwIidRzENXi8vOu-1802" value="核心属性：速度，速度会受到buff,场景影响，最终影响角色的左右闪避" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="90" y="525" width="280" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Uo8tirwIidRzENXi8vOu-1803" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="800" y="120" width="240" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="Uo8tirwIidRzENXi8vOu-1804" value="世界观" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="890" y="120" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Uo8tirwIidRzENXi8vOu-1805" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="90" y="640" width="280" height="330" as="geometry" />
+        </mxCell>
+        <mxCell id="Uo8tirwIidRzENXi8vOu-1806" value="付费" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="200" y="660" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Uo8tirwIidRzENXi8vOu-1807" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="90" y="690" width="280" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Uo8tirwIidRzENXi8vOu-1808" value="复活广告" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="90" y="705" width="280" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Uo8tirwIidRzENXi8vOu-1809" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="90" y="775" width="280" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Uo8tirwIidRzENXi8vOu-1810" value="关卡购买" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="90" y="790" width="280" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Uo8tirwIidRzENXi8vOu-1811" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="90" y="860" width="280" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Uo8tirwIidRzENXi8vOu-1812" value="角色皮肤" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="200" y="875" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Uo8tirwIidRzENXi8vOu-1813" value="外星球&lt;br&gt;山地，城市，洞穴，雪山，沙漠，海面，海底，空岛，太空&lt;br&gt;怪：" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="800" y="190" width="240" height="320" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
